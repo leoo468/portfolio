@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c064a9b659.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leoo468 - portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Meu Portfólio</h1>
+        <ul>
+          <li><a href="#hero">Sobre mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#certificados">Certificados</a></li>
+          <li><a href="#redes">Redes Sociais</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="hero">
+        <div class="stars"></div>
+
+        <h1>
+          <span id="typing" class="typing-effect">Olá, eu sou Leonardo</span>
+        </h1>
+        <p id="welcome">Boas vindas ao meu portfólio!</p>
+        <p id="bio">
+          Olá, me chamo Leonardo e sou desenvolvedor front-end. Programo desde
+          2020 e atualmente estou estudando backend para me tornar um
+          desenvolvedor fullstack.
+        </p>
+      </div>
+      <section id="projetos">
+        <h1>Meus projetos</h1>
+        <div class="projeto">
+          <img
+            src="./assets/img/project1.png"
+            alt="Imagem da Home do projeto."
+          />
+          <h2>Clone do Spotify</h2>
+          <p>
+            Clone do Spotify feito no intuito de melhorar minhas habilidades com
+            DOM, HTML, CSS e JavaScript.
+          </p>
+          <p>
+            Feito usando <span class="html">HTML</span>,
+            <span class="css">CSS</span> e <span class="js">JavaScript</span>.
+          </p>
+        </div>
+        <div class="projeto">
+          <img src="" alt="Imagem do projeto." />
+          <h2>Bot de Discord</h2>
+          <p>
+            Bot administrativo para servidores do discord. <br />Feito usando
+            <span class="pyt">Pyt</span><span class="hon">hon</span>
+          </p>
+        </div>
+      </section>
+      <section id="certificados">
+        <h1>Meus certificados</h1>
+        <p>Atualmente tenho os seguintes certificados</p>
+        <div class="certificado">
+          <img src="./assets/img/htmlCss.png" alt="Certificado 1" />
+          <h2>HTML e CSS na prática</h2>
+          <p>
+            Fundação Brasdeco <br />
+            (2021)
+          </p>
+        </div>
+        <div class="certificado">
+          <img src="./assets/img/htmlBasico.png" alt="Certificado 1" />
+          <h2>HTML básico</h2>
+          <p>
+            Fundação Brasdeco <br />
+            (2021)
+          </p>
+        </div>
+        <div class="learning">
+          <h2>Atualmente estou estudando as seguintes linguagens:</h2>
+          <ul>
+            <li id="python">
+              <span class="pyt">Pyt</span><span class="hon">hon</span> -
+              Fundação Bradesco
+            </li>
+            <li id="java"><span class="java">Java</span> - Curso em Video</li>
+            <li id="php"><span class="php">PHP</span> - Curso em Video</li>
+          </ul>
+        </div>
+      </section>
+      <section id="redes">
+        <h2>Você consegue me encontrar nas seguintes redes sociais:</h2>
+        <div class="redes">
+          <button id="instagram">
+            <a href="http://" target="_blank">
+              Instagram <i class="fa-brands fa-instagram"></i
+            ></a>
+          </button>
+          <button id="twitter">
+            <a href="" target="_blank"
+              >Twitter <i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </button>
+          <button id="github">
+            <a href="http://" target="_blank"
+              >GitHub <i class="fa-brands fa-github"></i
+            ></a>
+          </button>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Pussuo as seguintes habilidades</h2>
+        <div class="linguagens">
+          <ul class="skills-list">
+            <li class="html">HTML5 <i class="fa-brands fa-html5"></i></li>
+
+            <li class="css">CSS3 <i class="fa-brands fa-css3-alt"></i></li>
+            <li class="js">JavaScript <i class="fa-brands fa-js"></i></li>
+
+            <li>
+              <span class="pyt">Pyt</span><span class="hon">hon</span>
+              <span class="python-icon"
+                ><i class="fa-brands fa-python"></i
+              ></span>
+            </li>
+
+            <li>Git e GitHub <i class="fa-brands fa-github"></i></li>
+
+            <!-- Adicione mais habilidades -->
+          </ul>
+        </div>
+      </section>
+      <section id="contato">
+        <div class="contato">
+          <form
+            action="https://formsubmit.co/leonardomacri2@gmail.com"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Insira seu nome"
+              required
+            />
+            <input
+              type="text"
+              name="assunto"
+              placeholder="Insira o assunto"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Insira seu e-mail"
+              required
+            />
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script>
+      const textElement = document.getElementById("typing");
+      const textToType = "Olá, eu sou Leonardo";
+      let currentText = "";
+      let typingSpeed = 150; // Velocidade de digitação (ms)
+      let erasingSpeed = 100; // Velocidade de apagar (ms)
+      let pauseTime = 2000; // Tempo de pausa antes de apagar
+      let typingIndex = 0;
+      let isErasing = false;
+
+      function typeEffect() {
+        if (typingIndex < textToType.length && !isErasing) {
+          currentText += textToType.charAt(typingIndex);
+          textElement.textContent = currentText;
+          typingIndex++;
+          setTimeout(typeEffect, typingSpeed);
+        } else if (typingIndex === textToType.length && !isErasing) {
+          isErasing = true;
+          setTimeout(typeEffect, pauseTime); // Espera antes de apagar
+        } else if (isErasing && currentText.length > 0) {
+          currentText = currentText.slice(0, -1);
+          textElement.textContent = currentText;
+          setTimeout(typeEffect, erasingSpeed);
+        } else {
+          isErasing = false;
+          typingIndex = 0;
+          setTimeout(typeEffect, typingSpeed); // Inicia novamente o efeito de digitação
+        }
+      }
+
+      typeEffect();
+
+      function createStars(numStars) {
+        const starContainer = document.querySelector(".stars");
+
+        for (let i = 0; i < numStars; i++) {
+          const star = document.createElement("div");
+          star.classList.add("star");
+
+          // Define posições aleatórias
+          const x = Math.random() * window.innerWidth;
+          const y = Math.random() * window.innerHeight;
+
+          // Define a animação de cintilação de forma aleatória
+          const delay = Math.random() * 2;
+          const duration = Math.random() * 2 + 2;
+
+          // Aplica a posição e animação
+          star.style.left = `${x}px`;
+          star.style.top = `${y}px`;
+          star.style.animationDelay = `${delay}s`;
+          star.style.animationDuration = `${duration}s`;
+
+          // Adiciona a estrela ao container
+          starContainer.appendChild(star);
+        }
+      }
+
+      // Chama a função para criar 100 estrelas
+      createStars(100);
+      const dvd = document.querySelector(".dvd");
+      const speed = 2;
+      let x = 0,
+        y = 0;
+      let dx = speed,
+        dy = speed;
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      function moveDvd() {
+        x += dx;
+        y += dy;
+        if (x + dvd.clientWidth >= screenWidth || x <= 0) dx *= -1;
+        if (y + dvd.clientHeight >= screenHeight || y <= 0) dy *= -1;
+
+        dvd.style.left = `${x}px`;
+        dvd.style.top = `${y}px`;
+
+        requestAnimationFrame(moveDvd);
+      }
+      moveDvd();
+    </script>
+  </body>
+</html>
