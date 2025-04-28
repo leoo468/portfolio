@@ -12,12 +12,13 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="nav">
         <h1>Meu Portfólio</h1>
-        <ul>
+        <ul id="nav_list">
           <li><a href="#hero">Sobre mim</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#certificados">Certificados</a></li>
+          <li><a href="#learning">Estou Cursando</a></li>
           <li><a href="#redes">Redes Sociais</a></li>
           <li><a href="#skills">Habilidades</a></li>
           <li><a href="#contato">Contato</a></li>
@@ -34,13 +35,12 @@
         </h1>
         <p id="welcome">Boas vindas ao meu portfólio!</p>
         <p id="bio">
-          Olá, me chamo Leonardo e sou desenvolvedor front-end. Programo desde
-          2020 e atualmente estou estudando backend para me tornar um
-          desenvolvedor fullstack.
+          Olá, me chamo Leonardo e estudo programação desde 2020. Atualmente estou estudando frondEnd e futuramente penso em seguir como desenvolvedor fullStack.
         </p>
       </div>
       <section id="projetos">
         <h1>Meus projetos</h1>
+        <div class="projetos">
         <div class="projeto">
           <img
             src="./assets/img/project1.png"
@@ -52,22 +52,37 @@
             DOM, HTML, CSS e JavaScript.
           </p>
           <p>
-            Feito usando <span class="html">HTML</span>,
+            O projeto foi feito usando <span class="html">HTML</span>,
             <span class="css">CSS</span> e <span class="js">JavaScript</span>.
           </p>
+             <ul class="projeto_link">
+          <li>
+            <a href="https://leoo468.github.io/StarMusic/" target="_blank">Link do Projeto</a>
+          </li>
         </div>
+        
         <div class="projeto">
-          <img src="" alt="Imagem do projeto." />
-          <h2>Bot de Discord</h2>
+          <img src="./assets/img/project2.png" alt="Imagem da Home do projeto." />
+          <h2>Facilita</h2>
           <p>
-            Bot administrativo para servidores do discord. <br />Feito usando
-            <span class="pyt">Pyt</span><span class="hon">hon</span>
+            A facilita é um projeto acadêmico que ajuda o cliente com o processo de frete no ramo logístico.
           </p>
+          <p>O projeto foi feito usando <span class="html">HTML</span>,
+            <span class="css">CSS</span> e <span class="js">JavaScript</span>.
+          </p>
+            <ul class="projeto_link">
+          <li>
+            <a href="https://leoo468.github.io/intermediacao-transporte/" target="_blank">Link do Projeto</a>
+          </li>
         </div>
+        
+        </ul>
+      </div>
       </section>
       <section id="certificados">
         <h1>Meus certificados</h1>
-        <p>Atualmente tenho os seguintes certificados</p>
+        <p>Atualmente tenho os seguintes certificados:</p>
+        <div class="certificados">
         <div class="certificado">
           <img src="./assets/img/htmlCss.png" alt="Certificado 1" />
           <h2>HTML e CSS na prática</h2>
@@ -84,15 +99,16 @@
             (2021)
           </p>
         </div>
-        <div class="learning">
-          <h2>Atualmente estou estudando as seguintes linguagens:</h2>
+     </div>
+      </section>
+      <section id="learning">
+           <div class="learning">
+          <h2>Atualmente estou cursando:</h2>
           <ul>
-            <li id="python">
-              <span class="pyt">Pyt</span><span class="hon">hon</span> -
-              Fundação Bradesco
-            </li>
-            <li id="java"><span class="java">Java</span> - Curso em Video</li>
-            <li id="php"><span class="php">PHP</span> - Curso em Video</li>
+            <li id="js"><span class="js">JavaScript</span></li>
+            <li id="log"><span class="log">Logística</span></li>
+            <li id="java"><span class="java">Java</span> <span style="color: white;">-</span> <span class="cv">Curso em Video</span></li>
+            <li id="php"><span class="php">PHP</span> <span style="color: white;">-</span> <span class="cv">Curso em Video</span></li>
           </ul>
         </div>
       </section>
@@ -100,50 +116,46 @@
         <h2>Você consegue me encontrar nas seguintes redes sociais:</h2>
         <div class="redes">
           <button id="instagram">
-            <a href="http://" target="_blank">
+            <a href="https://www.instagram.com/leomacri468.bjj/" target="_blank">
               Instagram <i class="fa-brands fa-instagram"></i
             ></a>
           </button>
           <button id="twitter">
-            <a href="" target="_blank"
+            <a href="https://x.com/yumii468_" target="_blank"
               >Twitter <i class="fa-brands fa-x-twitter"></i
             ></a>
           </button>
           <button id="github">
-            <a href="http://" target="_blank"
+            <a href="https://github.com/leoo468" target="_blank"
               >GitHub <i class="fa-brands fa-github"></i
             ></a>
           </button>
         </div>
       </section>
+
       <section id="skills">
         <h2>Pussuo as seguintes habilidades</h2>
         <div class="linguagens">
           <ul class="skills-list">
             <li class="html">HTML5 <i class="fa-brands fa-html5"></i></li>
-
             <li class="css">CSS3 <i class="fa-brands fa-css3-alt"></i></li>
             <li class="js">JavaScript <i class="fa-brands fa-js"></i></li>
-
             <li>
-              <span class="pyt">Pyt</span><span class="hon">hon</span>
-              <span class="python-icon"
-                ><i class="fa-brands fa-python"></i
-              ></span>
+              <span class="pyt">Pyt<span class="hon">hon</span></span>
+              <span class="python-icon">
+              <i class="fa-brands fa-python"></i></span>
             </li>
-
             <li>Git e GitHub <i class="fa-brands fa-github"></i></li>
 
-            <!-- Adicione mais habilidades -->
           </ul>
         </div>
       </section>
+
       <section id="contato">
         <div class="contato">
           <form
             action="https://formsubmit.co/leonardomacri2@gmail.com"
-            method="POST"
-          >
+            method="POST">
             <input
               type="text"
               name="name"

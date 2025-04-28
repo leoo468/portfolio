@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 li {
   list-style: none;
@@ -18,23 +21,27 @@ body {
   background: linear-gradient(to bottom, #000046, #1d1d1d);
   font-family: "Karla", sans-serif;
 }
-nav ul {
+#nav_list {
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-nav a {
+#nav a {
   color: white;
   transition: color 0.3s ease;
 }
-nav h1 {
+#nav h1 {
   font-size: 1.5rem;
 }
-nav a:hover {
+#nav a:hover {
   color: rgb(231, 231, 231);
 }
-nav {
+#nav {
+  position: fixed;
+  z-index: 9999;
+  justify-content: space-between;
   top: 0;
   width: 100%;
   height: 60px;
@@ -74,7 +81,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Coloca as estrelas atrás do conteúdo */
+  z-index: -1; 
   overflow: hidden;
 }
 
@@ -196,7 +203,14 @@ nav {
   font-size: clamp(1.5rem, 4vw, 2rem);
   margin-bottom: 40px;
 }
+.projetos, .certificados {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
 .projeto {
+  cursor: default;
   width: min(800px, 90%);
   margin: 0 auto 40px;
   padding: 20px;
@@ -253,7 +267,13 @@ nav {
 .php {
   color: rgb(3, 33, 133);
 }
+.log {
+  color: rgb(153, 17, 17);
+}
 
+.excel{
+  color: green;
+}
 #certificados {
   padding: 40px 20px;
 }
@@ -280,6 +300,7 @@ nav {
 }
 
 .certificado {
+  cursor: default;
   width: min(800px, 90%);
   margin: 0 auto 40px;
   padding: 20px;
@@ -303,6 +324,7 @@ nav {
   margin-bottom: 40px;
 }
 .learning ul {
+  cursor: default;
   max-width: min(800px, 90%);
   margin: 0 auto;
 }
@@ -395,7 +417,23 @@ nav {
   margin-bottom: 40px;
 }
 
-.skills-list {
+.projeto_link li {
+  background: linear-gradient(to right, #8000a7, #ffea2b);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.projeto_link li a{
+  color: white;
+}
+
+
+.skills-list, .projeto_link {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -404,7 +442,7 @@ nav {
   margin: 0 auto;
 }
 
-.skills-list li {
+.skills-list li, .projeto_link li{
   padding: 15px 25px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
@@ -420,6 +458,7 @@ nav {
 .skills-list li:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
 }
 
 .contato form {
